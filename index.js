@@ -12,6 +12,7 @@ const redisStore = require('connect-redis').default;
 const { createClient } = require('redis');
 const redisClient = createClient({
     url: process.env.REDIS_URL
+    // url: 'rediss://red-chu9j0t269vccp38g44g:Q77bIVMN6DbpAtigKf0zHziPcvCjSBW4@oregon-redis.render.com:6379'
 });
 
 redisClient.connect().catch(console.error);
