@@ -11,7 +11,7 @@ const session = require('express-session');
 const redisStore = require('connect-redis').default;
 const { createClient } = require('redis');
 const redisClient = createClient({
-    url: process.env.REDIS_URL
+    url: 'redis://red-chu9j0t269vccp38g44g:6379'
     // url: 'rediss://red-chu9j0t269vccp38g44g:Q77bIVMN6DbpAtigKf0zHziPcvCjSBW4@oregon-redis.render.com:6379'
 });
 
@@ -49,8 +49,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(session({
     secret: process.env.SESSION_SECRET,
     store: new redisStore({ client: redisClient }),
-    resave: false,
-    saveUninitialized: false,
+    resave: true,
+    saveUninitialized: true,
     cookie: {
         httpOnly: true,
         maxAge: 20 * 60 * 1000
