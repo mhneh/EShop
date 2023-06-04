@@ -49,8 +49,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(session({
     secret: process.env.SESSION_SECRET,
     store: new redisStore({ client: redisClient }),
-    resave: true,
-    saveUninitialized: true,
+    resave: false,
+    saveUninitialized: false,
     cookie: {
         httpOnly: true,
         maxAge: 20 * 60 * 1000
