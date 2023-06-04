@@ -1,0 +1,37 @@
+{
+  "name": "20120448_ecommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "connect-flash": "^0.1.1",
+    "connect-redis": "^7.0.1",
+    "dotenv": "^16.1.2",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "express-handlebars-paginate": "^1.0.3",
+    "express-session": "^1.17.3",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.0",
+    "node-mailjet": "^6.0.2",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "pg": "^8.11.0",
+    "pg-hstore": "^2.3.4",
+    "redis": "^4.6.7",
+    "sequelize": "^6.31.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "engines": {
+    "node": "^18.12.1"
+  }
+}
